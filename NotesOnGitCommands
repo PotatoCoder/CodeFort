@@ -1,0 +1,59 @@
+git init : initialize, this commands sets up all the tools git needs to being tracking changes made to the project
+
+Git Project has three parts:
+
+    1. Working Directory : where you will be doing all the work, creating,editing,deleting and organizing files
+    2. Staging Area : where you will list changes you make to the working directory
+    3. Repository : where git permanently stores those changes as different versions of the project
+    
+    Git Workflow : consists of editing files in the working directory, adding files to the staging area, and saving changes to the git repository
+
+git status : checks status of changes
+
+untracked files : git sees the file but has not begin to track changes on it
+
+git add filename : adds file to staging area, or adds changes made to file to staging area
+
+git diff filename : checks differences between working directory and staging area
+
+git commit -m : permanently stores changes from the staging area inside the repository, -m is for the message 
+
+git log : see previous versions 
+
+
+HEAD commit : the commit you are currently on or the most recently made commit
+
+git show HEAD : shows HEAD commit
+
+git checkout HEAD filename : restores file in your working directory to look exactly as it did when you last made a commit
+
+git reset HEAD filename : resets the file in the staging area to be the same as the HEAD commit, does not discard file changes from working directory, it just removes them from staging area
+
+git reset SHA : uses first 7 characters of the SHA of a previous commit
+
+git branch : tells you which branch you are currently in 
+
+git branch new_branch : creates a new branch
+
+git checkout branch_name : switch to branch
+
+git merge branch_name : include all changes made in branch to master branch
+
+git branch -d branch_name : delete branch
+
+git clone remote_location clone_name : get a copy of a remote repository for you to work on
+
+git remote -v : see a list of a Git projects remotes
+
+git fetch : see if changes have been made to the remote and bring changes down to your local copy, it does not merge changes into your local versions,
+then you need to merge orgin/master
+
+
+Git Remote Workflow:
+    1. Fetch and merge changes from the remote
+    2. Create a branch to work on a new project feature
+    3. Develop the feature on your branch and commit your work
+    4. Fetch and merge from the remote again
+    5. Push your branch up to the remote for review
+    
+git push origin your_branch_name : push your branch up to the remote, origin. From there owner and merge it into master
